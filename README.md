@@ -66,7 +66,7 @@ int main()
 
 ```
 # OUTPUT
-<img width="254" alt="image" src="https://github.com/manomadhivanan/IMPLEMENTATION-OF-SYMBOL-TABLE-/assets/115543366/7b555891-a37b-4c77-9911-6169b6ce0965">
+<img width="255" alt="image" src="https://github.com/manomadhivanan/IMPLEMENTATION-OF-SYMBOL-TABLE-/assets/115543366/feae5fd7-3c42-4210-8a3d-1853cd93c303">
 
 # RESULT
 ### The program to implement a symbol table is executed and the output is verified.
