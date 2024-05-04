@@ -1,4 +1,8 @@
-# Ex-2 IMPLEMENTATION-OF-SYMBOL-TABLE
+# Ex-2 IMPLEMENTATION OF SYMBOL TABLE
+# NAME:MANO M
+# REGISTER NUMBER:212221040100
+# DATE:14.02.2024
+
 # AIM :
 ## To write a C program to implement a symbol table.
 # ALGORITHM
@@ -11,62 +15,63 @@
 7.	To reach a variable, enter the variable to be searched and symbol table has been checked for corresponding variable, the variable along with its address is displayed as result.
 8.	Stop the program. 
 # PROGRAM
-```
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-int main()
+`````
+#include<stdio.h>
+#include<conio.h> 
+#include<ctype.h> 
+#include<malloc.h> 
+#include<string.h> 
+#include<math.h>
+void main()
 {
-    char expression[20];
-    int i = 0, x = 0, n, flag = 0;
-    void *add[5];
-    char d[15], c, srch;
-
-    printf("Enter the Expression: ");
-    scanf("%s", expression);
-
-    n = strlen(expression);
-
-    printf("Given Expression: %s\n", expression);
-
-    printf("Symbol Table\n");
-    printf("Symbol\taddr\ttype\n");
-    while (i < n)
-    {
-        c = expression[i];
-        if (isalpha(c))
-        {
-            add[x] = &expression[i];
-            d[x] = c;
-            printf("%c\t%p\tidentifier\n", c, (void *)&expression[i]);
-            x++;
-        }
-        i++;
-    }
-
-    printf("\nThe symbol to be searched: ");
-    scanf(" %c", &srch);
-    for (i = 0; i < x; i++)
-    {
-        if (srch == d[i])
-        {
-            printf("\nSymbol Found");
-            printf("\n%c\t@address %p\n", srch, (void *)add[i]);
-            flag = 1;
-            break;
-        }
-    }
-
-    if (flag == 0)
-        printf("\nSymbol Not Found");
-
-    return 0;
+int i=0,j=0,x=0,n,flag=0; void *p,*add[5];
+char ch,srch,b[15],d[15],c; 
+printf("Enter the Expression terminated by $: ");
+while((c=getchar())!='$')
+{
+b[i]=c; i++;
+}
+n=i-1;
+printf("Given Expression:"); i=0;
+while(i<=n)
+{
+printf("%c",b[i]); i++;
+}
+printf("\n Symbol Table\n"); printf("Symbol\taddr\ttype"); while(j<=n)
+{
+c=b[j]; if(isalpha(toascii(c)))
+{
+if(j==n)
+{
+p=malloc(c); add[x]=p;
+d[x]=c;
+printf("%c\t%d\tidentifier",c,p);
+}
+else
+{
+ch=b[j+1];
+if(ch=='+'||ch=='-'||ch=='*'||ch=="=")
+{
+p=malloc(c); add[x]=p;
+d[x]=c; printf("\n%c\t%d\tidentifier\n",c,p); x++;
+}}} j++;
+}
+printf("\n The symbol is to be searched"); srch=getch();
+for(i=0;i<=x;i++)
+{
+if(srch==d[i])
+{
+printf("\n Symbol Found"); printf("\n%c%s%d\n",srch,"@address",add[i]); flag=1;
+}
+}
+if(flag==0)
+printf("\nSymbol Not Found"); 
+getch();
 }
 
-```
+`````
 # OUTPUT
-<img width="255" alt="image" src="https://github.com/manomadhivanan/IMPLEMENTATION-OF-SYMBOL-TABLE-/assets/115543366/feae5fd7-3c42-4210-8a3d-1853cd93c303">
+<img width="468" alt="image" src="https://github.com/manomadhivanan/IMPLEMENTATION-OF-SYMBOL-TABLE-/assets/115543366/60494a17-7efe-4397-9779-d5bb8598a011">
+
 
 # RESULT
-### The program to implement a symbol table is executed and the output is verified.
