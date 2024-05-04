@@ -71,7 +71,8 @@ getch();
 
 `````
 # OUTPUT
-<img width="468" alt="image" src="https://github.com/manomadhivanan/IMPLEMENTATION-OF-SYMBOL-TABLE-/assets/115543366/60494a17-7efe-4397-9779-d5bb8598a011">
+<img width="468" alt="image" src="https://github.com/manomadhivanan/IMPLEMENTATION-OF-SYMBOL-TABLE-/assets/115543366/c919f972-dbaa-41ea-a9b1-c057bb86fa2d">
 
 
 # RESULT
+ The program to implement a symbol table is executed and the output is verified.
